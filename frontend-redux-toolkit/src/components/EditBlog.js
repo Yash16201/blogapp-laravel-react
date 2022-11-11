@@ -14,6 +14,7 @@ const EditBlog = () => {
   const { single_blog } = useSelector(state => state.blog);
   useEffect(() => {
     dispatch(fetchblogbyid(id))
+    // eslint-disable-next-line
   },[])
 
   return (
