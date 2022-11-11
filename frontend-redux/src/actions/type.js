@@ -1,0 +1,19 @@
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
+export const REGISTER_FAIL = "REGISTER_FAIL";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAIL = "LOGIN_FAIL";
+export const LOGOUT = "LOGOUT";
+
+export const BLOG_ADDED = "BLOG_ADDED";
+export const BLOG_FAILED = "BLOG_FAILED";
+export const BLOG_EDITED = "BLOG_EDITED";
+export const BLOG_UNEDITED = "BLOG_UNEDITED";
+export const BLOG_FETCHED = "BLOG_FETCHED";
+export const BLOG_UNFETCHED = "BLOG_UNFETCHED";
+export const SINGLE_BLOG_FETCHED = "SINGLE_BLOG_FETCHED";
+export const SINGLE_BLOG_UNFETCHED = "SINGLE_BLOG_UNFETCHED";
+export const BLOG_DELETED = "BLOG_DELETED";
+export const BLOG_UNDELETED = "BLOG_UNDELETED";
+
+export const SET_MESSAGE = "SET_MESSAGE";
+export const CLEAR_MESSAGE = "CLEAR_MESSAGE";
