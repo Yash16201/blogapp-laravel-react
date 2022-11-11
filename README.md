@@ -9,3 +9,5 @@ In frontend context CONTEXT API is used for functioning
 In frontend-redux redux is used for functioning
 
 In frontend-redux-toolkit redux-toolkit is used for functioning
+
+All frontend folders uses same api but difference is in the functioning
