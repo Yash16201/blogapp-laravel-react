@@ -15,6 +15,7 @@ function Home() {
 
   useEffect(()=>{
     fetchBlogs() 
+    // eslint-disable-next-line
   },[]);
   const fetchBlogs = async () => {
     http.post('/myblogs',{id:user.id}).then((res)=>{  
@@ -83,7 +84,7 @@ function Home() {
                             <td>
                                 <Link className="btn btn-success" to={`/viewblog/${row.id}`} role="button">View </Link>
                                 <Link className="btn btn-primary mx-2" to={`/editblog/${row.id}`} role="button">Edit</Link> 
-                                <a className="btn btn-danger" onClick={()=>handleDelete(row.id)} role="button">Delete</a>
+                                <button className="btn btn-danger" onClick={()=>handleDelete(row.id)}>Delete</button>
                             </td>
                         </tr>
                     ))

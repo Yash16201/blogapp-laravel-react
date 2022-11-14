@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 
 function AddBlog() {
     const navigate = useNavigate();
-    const { http, user } = ConnApi();
+    const { user } = ConnApi();
     const [Title, setTitle] = useState();
     const [Description, setDescription] = useState();
     const [Image, setImage] = useState();

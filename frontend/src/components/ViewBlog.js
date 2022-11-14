@@ -8,7 +8,8 @@ function ViewBlog() {
     const { http, user } = ConnApi();
     const [Blogs , setBlogs] = useState([]);
     useEffect(()=>{
-        fetchBlog() 
+        fetchBlog()
+        // eslint-disable-next-line 
     },[]);
     const fetchBlog = async () => {
         http.post('/viewblog',{id:user.id,blog:id}).then((res)=>{ 
@@ -29,7 +30,7 @@ function ViewBlog() {
                         <b>Title :- </b> {row.blog_title} <br></br>
                         <b>Description :- </b> {row['detail'].post_text} <br></br>
                         <b>Image :- </b> <br></br>
-                            <img src={`http://localhost:8000/public/image/${row['detail'].blog_attachment_1}`} className="img-fluid"/>
+                            <img src={`http://localhost:8000/public/image/${row['detail'].blog_attachment_1}`} alt="Blogimg" className="img-fluid"/>
 
 
                     </div>

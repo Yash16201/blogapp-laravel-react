@@ -43,6 +43,7 @@ function EditBlog() {
       }
     useEffect(()=>{
         fetchBlog() 
+        // eslint-disable-next-line
     },[]);
     const fetchBlog = async () => {
         http.post('/viewblog',{id:user.id,blog:id}).then((res)=>{ 
