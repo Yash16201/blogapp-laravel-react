@@ -32,6 +32,8 @@ const deleteblog = async (id) => {
     return await axios.post('http://localhost:8000/api/deleteblog',{id:user.id,blog:id})
 }
 
-export default {
+const BlogService = {
     addBlog, editblog ,fetchBlogs , fetchBlogById , livesearch, deleteblog
-};
+}
+
+export default BlogService;

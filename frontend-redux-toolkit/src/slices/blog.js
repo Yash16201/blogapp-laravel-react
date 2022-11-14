@@ -3,7 +3,7 @@ import { setMessage } from "./message";
 import Swal from "sweetalert2";
 import BlogService from "../services/blog.service"
 
-const user = JSON.parse(localStorage.getItem("user"));
+// const user = JSON.parse(localStorage.getItem("user"));
 
 export const addBlog = createAsyncThunk("blog/add",
     async (data, thunkAPI) => {

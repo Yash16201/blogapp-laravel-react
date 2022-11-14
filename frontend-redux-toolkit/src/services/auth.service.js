@@ -20,8 +20,10 @@ const logoutUser = () =>{
     sessionStorage.clear();
 }
 
-export default {
+const AuthService = {
     register,
     login,
-    logoutUser,
-};
+    logoutUser
+}
+
+export default AuthService;
