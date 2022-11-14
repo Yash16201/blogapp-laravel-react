@@ -2,12 +2,10 @@ import React , {useContext, useEffect, useState}from "react";
 import { Link } from 'react-router-dom';
 import blogContext from '../context/Blogs/blogContext';
 import ReactPaginate from 'react-paginate';
-import { useNavigate } from "react-router-dom";
 
 
 const Home = () => {
-    const navigate = useNavigate();
-    const {fetchBlogs, Blogs, livesearch , deleteblog, fetchBlogById} = useContext(blogContext);
+    const {fetchBlogs, Blogs, livesearch , deleteblog} = useContext(blogContext);
     const [Search, setSearch] =useState();
     const [PageNumber, setPageNumber] = useState(0);
     const BlogsPerPage = 4;
@@ -15,6 +13,7 @@ const Home = () => {
 
     useEffect(() => {
       fetchBlogs();
+      // eslint-disable-next-line
     },[])
 
     const handleDelete = async (id) => {
@@ -62,8 +61,7 @@ const Home = () => {
                             <td>
                                 <Link className="btn btn-success" to={`/viewblog/${row.id}`} role="button">View </Link>
                                 <Link className="btn btn-primary mx-2" to={`/editblog/${row.id}`} role="button">Edit</Link> 
-                                {/* <a className="btn btn-primary mx-2" onClick={()=>handleEdit(row.id)} role="button">Delete</a> */}
-                                <a className="btn btn-danger" onClick={()=>handleDelete(row.id)} role="button">Delete</a>
+                                <button className="btn btn-danger" onClick={()=>handleDelete(row.id)}>Delete</button>
                             </td>
                         </tr>
                     ))
