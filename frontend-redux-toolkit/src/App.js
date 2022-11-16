@@ -21,7 +21,7 @@ const App = () => {
             <Route path='/viewblog/:id' element={<ViewBlog/>}/> 
             <Route path='/editblog/:id' element={<EditBlog/>}/>  
         </Routes>
-    </div>
+    </div>  
   );
 }
 
