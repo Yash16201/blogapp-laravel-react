@@ -9,7 +9,7 @@ import ViewBlog from './components/ViewBlog';
 import logo from './logo.svg';
 
 function App() {
-  const user = localStorage.getItem('user') || null;
+  const user:string | null = localStorage.getItem('user');
   
   return (
     <div>
@@ -25,7 +25,7 @@ function App() {
         </div>
       }
       {
-        user == null || user == ""  && <div>
+        user == null || user === ""  &&  <div>
           <Guest/>
         </div>
       }
