@@ -4,6 +4,7 @@ import {Routes, Route} from "react-router-dom";
 import Guest from "./components/Guest";
 import Home from './components/Home';
 import Navbar from './components/Navbar';
+import AddBlog from './components/AddBlog';
 import logo from './logo.svg';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Navbar/>
           <Routes>
               <Route path='/' element={<Home/>}/>
+              <Route path='/addblog' element={<AddBlog/>}/>  
           </Routes>
         </div>
       }
