@@ -49,6 +49,7 @@ export const fetchblogs = createAsyncThunk("blog/fetch",
 async (thunkAPI) => {
     try {
         const response = await BlogService.fetchBlogs();
+        // thunkAPI.dispatch(setMessage(response.data.message));
         return response;
     } catch (error:any) {
         Swal.fire({
@@ -140,7 +141,7 @@ const blogSlice = createSlice({
             state.blog = action.payload
             state.single_blog = []
         });
-        builder.addCase(fetchblogs.rejected, (state:any, action ) => {
+        builder.addCase(fetchblogs.rejected, (state:any, action:PayloadAction<any> ) => {
             state.blog = []
             state.single_blog = []
         });

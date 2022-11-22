@@ -10,7 +10,7 @@ const login = async (data:{}) => {
         // setToken(res.data.user, res.data.access_token);
         if (res.data.access_token) {
             sessionStorage.setItem('token',res.data.access_token);
-            sessionStorage.setItem('user',JSON.stringify(res.data.user));
+            sessionStorage.setItem('user',res.data.user.id);
         }
         return res.data;
     })  
