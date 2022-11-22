@@ -34,11 +34,6 @@ export const register = createAsyncThunk(
     }
 );
 
-interface LoginCred {
-    email :string,
-    password : string
-}
-
 export const login = createAsyncThunk(
     "auth/login",
     async (data:any, thunkAPI) => {
