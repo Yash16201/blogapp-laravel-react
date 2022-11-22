@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import AddBlog from './components/AddBlog';
 import ViewBlog from './components/ViewBlog';
+import EditBlog from './components/EditBlog';
 import logo from './logo.svg';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
               <Route path='/' element={<Home/>}/>
               <Route path='/addblog' element={<AddBlog/>}/>  
               <Route path='/viewblog/:id' element={<ViewBlog/>}/> 
+              <Route path='/editblog/:id' element={<EditBlog/>}/>  
           </Routes>
         </div>
       }

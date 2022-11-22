@@ -57,7 +57,7 @@ const AddBlog = () => {
                         Object.entries(message).map(([key, value]:any)=>(
                             <p className='text-danger'>{value['image'] ? value['image'] : ""}</p> 
                         ))  
-              )) }
+            )) }
           </div>
           <div className="form-group mb-3">
             <label htmlFor="visible_from">Visible From</label>
@@ -66,7 +66,7 @@ const AddBlog = () => {
                         Object.entries(message).map(([key, value]:any)=>(
                             <p className='text-danger'>{value['visible_from'] ? value['visible_from'] : ""}</p> 
                         ))  
-              )) }
+            )) }
           </div>
           <div className="form-group mb-3">
             <label htmlFor="visible_to">Visible To</label>
@@ -75,7 +75,7 @@ const AddBlog = () => {
                         Object.entries(message).map(([key, value]:any)=>(
                             <p className='text-danger'>{value['visible_to'] ? value['visible_to'] : ""}</p> 
                         ))  
-              )) }
+            )) }
           </div>
   
           <input type="submit" name="submit" className="btn btn-primary my-3 form-control"></input>

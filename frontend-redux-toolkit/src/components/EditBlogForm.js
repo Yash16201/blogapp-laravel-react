@@ -75,7 +75,7 @@ const EditBlogForm = (props) => {
             <input type="date" name="visible_to" id="inputdate" className="form-control" value={Visibleto} onChange={e=>setVisibleto(e.target.value)}/>
         </div>
         <input type="submit" name="submit" className="btn btn-primary my-3 form-control"></input>
-        </form>
+    </form>
     </>
   )
 }

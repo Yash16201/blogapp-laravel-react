@@ -139,17 +139,17 @@ const blogSlice = createSlice({
         });
         builder.addCase(fetchblogs.fulfilled, (state:any, action:PayloadAction<any> ) => {
             state.blog = action.payload
-            state.single_blog = []
+            state.singleBlog = []
         });
         builder.addCase(fetchblogs.rejected, (state:any, action:PayloadAction<any> ) => {
             state.blog = []
-            state.single_blog = []
+            state.singleBlog = []
         });
         builder.addCase(fetchblogbyid.fulfilled, (state:any, action:PayloadAction<any> ) => {
-            state.single_blog = action.payload
+            state.singleBlog = action.payload
         });
         builder.addCase(fetchblogbyid.rejected, (state:any, action ) => {
-            state.single_blog = []
+            state.singleBlog = []
         });
     },  
 });
