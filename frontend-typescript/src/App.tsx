@@ -5,6 +5,7 @@ import Guest from "./components/Guest";
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import AddBlog from './components/AddBlog';
+import ViewBlog from './components/ViewBlog';
 import logo from './logo.svg';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Routes>
               <Route path='/' element={<Home/>}/>
               <Route path='/addblog' element={<AddBlog/>}/>  
+              <Route path='/viewblog/:id' element={<ViewBlog/>}/> 
           </Routes>
         </div>
       }
