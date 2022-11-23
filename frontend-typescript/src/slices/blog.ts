@@ -19,6 +19,7 @@ export const addBlog = createAsyncThunk("blog/add",
                   text:error.response.data.message,
                   icon:"error"
                 })
+                return thunkAPI.rejectWithValue(error);
             }  
         }
     }  
@@ -40,6 +41,7 @@ export const editBlog = createAsyncThunk("blog/edit",
                   text:error.response.data.message,
                   icon:"error"
                 })
+                return thunkAPI.rejectWithValue(error);
             }  
         }
     }  
@@ -70,6 +72,7 @@ async (id:any, thunkAPI) => {
             text:error.response.data.message,
             icon:"error"
         })
+        return thunkAPI.rejectWithValue(error);
     }
 }  
 );
@@ -80,7 +83,7 @@ async (Search:string, thunkAPI) => {
         const response = await BlogService.livesearch(Search);
         return response;
     } catch (error:any) {
-        console.log(error);
+        return thunkAPI.rejectWithValue(error);
         Swal.fire({
             text:error.response.data.message,
             icon:"error"
@@ -96,6 +99,7 @@ async (id:any, thunkAPI) => {
         thunkAPI.dispatch(setMessage(response.data.message));
         return response.data;
     } catch (error:any) {
+        return thunkAPI.rejectWithValue(error);
         Swal.fire({
             text:error.response.data.message,
             icon:"error"
