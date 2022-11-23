@@ -8,18 +8,16 @@ import AddBlog from './components/AddBlog';
 import ViewBlog from './components/ViewBlog';
 import EditBlog from './components/EditBlog';
 import { RootState } from "./store";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
-import logo from './logo.svg';
 
 function App() {
-  const user:any = localStorage.getItem('user');
   const isLoggedIn  = useSelector((state : RootState) => state.auth.isLoggedIn);
   return (
     <div>
 
       {
-        isLoggedIn == true && <div>
+        isLoggedIn === true && <div>
           <Navbar/>
           <Routes>
               <Route path='/' element={<Home/>}/>
@@ -30,7 +28,7 @@ function App() {
         </div>
       }
       {
-        isLoggedIn == false && <div>
+        isLoggedIn === false && <div>
           <Guest/>
         </div>
       }
