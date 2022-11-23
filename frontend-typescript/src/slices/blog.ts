@@ -83,11 +83,11 @@ async (Search:string, thunkAPI) => {
         const response = await BlogService.livesearch(Search);
         return response;
     } catch (error:any) {
-        return thunkAPI.rejectWithValue(error);
         Swal.fire({
             text:error.response.data.message,
             icon:"error"
         })
+        return thunkAPI.rejectWithValue(error);
     }
 }  
 );
@@ -99,11 +99,11 @@ async (id:any, thunkAPI) => {
         thunkAPI.dispatch(setMessage(response.data.message));
         return response.data;
     } catch (error:any) {
-        return thunkAPI.rejectWithValue(error);
         Swal.fire({
             text:error.response.data.message,
             icon:"error"
         })
+        return thunkAPI.rejectWithValue(error);
     }
 }  
 );
