@@ -15,7 +15,6 @@ import logo from './logo.svg';
 function App() {
   const user:any = localStorage.getItem('user');
   const isLoggedIn  = useSelector((state : RootState) => state.auth.isLoggedIn);
-  console.log(isLoggedIn);
   return (
     <div>
 
