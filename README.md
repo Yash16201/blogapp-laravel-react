@@ -10,6 +10,6 @@ In frontend-redux redux is used for functioning
 
 In frontend-redux-toolkit redux-toolkit is used for functioning
 
-In frontend-typescript #TYPESCRIPT is used all over app
+In frontend-typescript **TYPESCRIPT** is used all over app
 
 All frontend folders uses same api but difference is in the functioning
