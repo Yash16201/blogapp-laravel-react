@@ -37,7 +37,7 @@ const AddBlog = () => {
               <input type="text" className="form-control" onChange={e=>setTitle(e.target.value)} />
               {message &&(Object.keys(message).length > 0 && (
                         Object.entries(message).map(([key, value]:any)=>(
-                            <p className='text-danger'>{value['title'] ? value['title'] : ""}</p> 
+                            <p className='text-danger' key={key}>{value['title'] ? value['title'] : ""}</p> 
                         ))  
               )) }
           </div>
@@ -46,7 +46,7 @@ const AddBlog = () => {
               <textarea name="description" className="form-control" rows={5} cols={137} onChange={e=>setDescription(e.target.value)}></textarea>
               {message &&(Object.keys(message).length > 0 && (
                         Object.entries(message).map(([key, value]:any)=>(
-                            <p className='text-danger'>{value['description'] ? value['description'] : ""}</p> 
+                            <p className='text-danger' key={key}>{value['description'] ? value['description'] : ""}</p> 
                         ))  
               )) }
           </div>
@@ -55,7 +55,7 @@ const AddBlog = () => {
             <input type="file" name="image" className="form-control" onChange={(e:any)=>setImage(e.target.files[0])}/>
             {message &&(Object.keys(message).length > 0 && (
                         Object.entries(message).map(([key, value]:any)=>(
-                            <p className='text-danger'>{value['image'] ? value['image'] : ""}</p> 
+                            <p className='text-danger' key={key}>{value['image'] ? value['image'] : ""}</p> 
                         ))  
             )) }
           </div>
@@ -64,7 +64,7 @@ const AddBlog = () => {
             <input type="date" name="visible_from" id="inputdate" className="form-control" onChange={e=>setVisiblefrom(e.target.value)}/>
             {message &&(Object.keys(message).length > 0 && (
                         Object.entries(message).map(([key, value]:any)=>(
-                            <p className='text-danger'>{value['visible_from'] ? value['visible_from'] : ""}</p> 
+                            <p className='text-danger' key={key}>{value['visible_from'] ? value['visible_from'] : ""}</p> 
                         ))  
             )) }
           </div>
@@ -73,7 +73,7 @@ const AddBlog = () => {
             <input type="date" name="visible_to" id="inputdate" className="form-control" onChange={e=>setVisibleto(e.target.value)}/>
             {message &&(Object.keys(message).length > 0 && (
                         Object.entries(message).map(([key, value]:any)=>(
-                            <p className='text-danger'>{value['visible_to'] ? value['visible_to'] : ""}</p> 
+                            <p className='text-danger' key={key}>{value['visible_to'] ? value['visible_to'] : ""}</p> 
                         ))  
             )) }
           </div>

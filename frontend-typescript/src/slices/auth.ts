@@ -46,7 +46,6 @@ export const login = createAsyncThunk(
       } catch (error:any) {
         if(error.response.status===422){
             const message = error.response.data.errors
-            console.log(message);
             thunkAPI.dispatch(setMessage(message));
             return thunkAPI.rejectWithValue(message);
         }else{
@@ -79,8 +78,6 @@ const authSlice = createSlice({
             state.isLoggedIn = false;
         });
         builder.addCase(login.fulfilled, (state, action:PayloadAction<any>) => {
-            console.log('done');
-            
             state.isLoggedIn = true;
             state.user = action.payload;
         });

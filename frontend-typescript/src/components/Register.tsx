@@ -41,7 +41,7 @@ const Register = () => {
                     <input type="text" className="form-control" id="exampleInputEmail1" onChange={e=>setName(e.target.value)} />
                     {message &&(Object.keys(message).length > 0 && (
                         Object.entries(message).map(([key, value]:any)=>(
-                            <p className='text-danger'>{value['name'] ? value['name'] : ""}</p> 
+                            <p className='text-danger' key={key}>{value['name'] ? value['name'] : ""}</p> 
                         ))  
                     )) }
                 </div>
@@ -50,7 +50,7 @@ const Register = () => {
                     <input type="email" className="form-control" id="exampleInputEmail1" onChange={e=>setEmail(e.target.value)}/>
                     {message &&(Object.keys(message).length > 0 && (
                         Object.entries(message).map(([key, value]:any)=>(
-                            <p className='text-danger'>{value['email'] ? value['email'] : ""}</p> 
+                            <p className='text-danger' key={key}>{value['email'] ? value['email'] : ""}</p> 
                         ))  
                     )) }
                 </div>
@@ -70,7 +70,7 @@ const Register = () => {
                     </label>
                     {message &&(Object.keys(message).length > 0 && (
                         Object.entries(message).map(([key, value]:any)=>(
-                            <p className='text-danger'>{value['gender'] ? value['gender'] : ""}</p> 
+                            <p className='text-danger' key={key}>{value['gender'] ? value['gender'] : ""}</p> 
                         ))  
                     )) }
                 </div>
@@ -79,7 +79,7 @@ const Register = () => {
                     <input type="password" className="form-control" id="exampleInputPassword1" onChange={e=>setPassword(e.target.value)}/>
                     {message &&(Object.keys(message).length > 0 && (
                         Object.entries(message).map(([key, value]:any)=>(
-                            <p className='text-danger'>{value['password'] ? value['password'] : ""}</p> 
+                            <p className='text-danger' key={key}>{value['password'] ? value['password'] : ""}</p> 
                         ))  
                     )) }
                 </div>

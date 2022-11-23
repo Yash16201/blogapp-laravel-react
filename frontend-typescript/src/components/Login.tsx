@@ -26,7 +26,7 @@ const Login = () => {
             navigate("/");
         })
         .catch(() => {
-            console.log('error');
+            console.log('Something Went Wrong');
         });
     }
     
@@ -40,7 +40,7 @@ const Login = () => {
                     <input type="email" className="form-control" onChange={e=>setEmail(e.target.value)}/>
                     {message &&(Object.keys(message).length > 0 && (
                         Object.entries(message).map(([key, value]:any)=>(
-                            <p className='text-danger'>{value['email'] ? value['email'] : ""}</p> 
+                            <p className='text-danger' key={key}>{value['email'] ? value['email'] : ""}</p> 
                         ))  
                     )) }
                 </div>
@@ -49,7 +49,7 @@ const Login = () => {
                     <input type="password" className="form-control" onChange={e=>setPassword(e.target.value)}/>
                     {message &&(Object.keys(message).length > 0 && (
                         Object.entries(message).map(([key, value]:any)=>(
-                            <p className='text-danger'>{value['password'] ? value['password'] : ""}</p> 
+                            <p className='text-danger' key={key}>{value['password'] ? value['password'] : ""}</p> 
                         ))  
                     )) }
                 </div>
