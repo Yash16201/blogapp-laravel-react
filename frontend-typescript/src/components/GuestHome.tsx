@@ -1,6 +1,3 @@
-import React from "react";
-
-
 const GuestHome = () => {
     return (
         <div>

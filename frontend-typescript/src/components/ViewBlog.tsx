@@ -10,6 +10,7 @@ const ViewBlog = () => {
   const blog:any  = useSelector((state: RootState) => state.blog.singleBlog);
   useEffect(() => {
     dispatch(fetchblogbyid(id))
+    // eslint-disable-next-line
   },[])
   return (
     <div className="container">

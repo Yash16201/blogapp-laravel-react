@@ -1,12 +1,10 @@
-import React from 'react';
 import { useDispatch } from "react-redux";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { logout } from "../slices/auth";
-import { RootState, AppDispatch } from "../store";
+import { AppDispatch } from "../store";
 
 
 const Navbar = () => {
-    const navigate = useNavigate();
     const dispatch = useDispatch<AppDispatch>();
     const logoutUser = ()=>{
         dispatch(logout())

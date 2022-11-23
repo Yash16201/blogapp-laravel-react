@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import {useEffect, useState} from 'react'
 import ReactPaginate from 'react-paginate';
 import { RootState, AppDispatch } from "../store";
 import { Link } from 'react-router-dom';
@@ -16,7 +16,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(fetchblogs())
-    
+    // eslint-disable-next-line
   },[])
 
   const pageCount:any = Math.ceil(blog.blog.length / BlogsPerPage);
