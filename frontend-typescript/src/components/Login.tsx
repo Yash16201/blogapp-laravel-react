@@ -24,7 +24,6 @@ const Login = () => {
         .unwrap()
         .then(() => {  
             navigate("/");
-            window.location.reload(); 
         })
         .catch(() => {
             console.log('error');

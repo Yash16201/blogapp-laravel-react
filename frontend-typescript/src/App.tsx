@@ -7,16 +7,20 @@ import Navbar from './components/Navbar';
 import AddBlog from './components/AddBlog';
 import ViewBlog from './components/ViewBlog';
 import EditBlog from './components/EditBlog';
+import { RootState } from "./store";
+import { useDispatch, useSelector } from "react-redux";
+
 import logo from './logo.svg';
 
 function App() {
-  const user:string | null = localStorage.getItem('user');
-  
+  const user:any = localStorage.getItem('user');
+  const isLoggedIn  = useSelector((state : RootState) => state.auth.isLoggedIn);
+  console.log(isLoggedIn);
   return (
     <div>
 
       {
-        user !== null || user !== "" && <div>
+        isLoggedIn == true && <div>
           <Navbar/>
           <Routes>
               <Route path='/' element={<Home/>}/>
@@ -27,15 +31,11 @@ function App() {
         </div>
       }
       {
-        user == null || user === ""  &&  <div>
+        isLoggedIn == false && <div>
           <Guest/>
         </div>
       }
     
-      {/* <Navbar/>
-        <Routes>
-             <Route path='/' element={<Home/>}/>
-        </Routes>  */}
 
     </div>
   );
