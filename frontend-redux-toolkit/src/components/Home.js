@@ -16,6 +16,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(fetchblogs())
+    //eslint-disable-next-line
   },[])
 
   const pageCount = Math.ceil(blog.length / BlogsPerPage);
@@ -64,7 +65,7 @@ const Home = () => {
                                 <Link className="btn btn-success" to={`/viewblog/${row.id}`} role="button">View </Link>
                                 <Link className="btn btn-primary mx-2" to={`/editblog/${row.id}`} role="button">Edit</Link> 
                                 {/* <a className="btn btn-primary mx-2" onClick={()=>handleEdit(row.id)} role="button">Delete</a> */}
-                                <a className="btn btn-danger" onClick={()=>handleDelete(row.id)} role="button">Delete</a>
+                                <button className="btn btn-danger" onClick={()=>handleDelete(row.id)}>Delete</button>
                             </td>
                         </tr>
                     ))
